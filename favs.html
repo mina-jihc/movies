@@ -38,11 +38,10 @@
     </style>
   </head>
   <body>
-    <button
-      onclick="window.location.href = 'index.html'"
-      style="margin-bottom: 20px; cursor: pointer"
-    >
-      Back to Home
+    <button style="margin-bottom: 20px; cursor: pointer">
+      <a href="popular.html" style="text-decoration: none; color: black"
+        >Back To Home</a
+      >
     </button>
     <h1>My Favorites</h1>
     <div class="container" id="fav-container"></div>
@@ -50,34 +49,34 @@
     <script>
       const favContainer = document.getElementById("fav-container");
 
-function displayFavs() {
-    const favs = JSON.parse(localStorage.getItem("myFavs")) || [];
-    
-    if (favs.length === 0) {
-        favContainer.innerHTML = "<h2>There is no favourite film</h2>";
-        return;
-    }
+      function displayFavs() {
+        const favs = JSON.parse(localStorage.getItem("myFavs")) || [];
 
-    favContainer.innerHTML = "";
-    favs.forEach(film => {
-        const card = document.createElement("div");
-        card.className = "movie-card";
-        card.innerHTML = `
-            <img src="${film.image ? film.image.medium : ''}">
+        if (favs.length === 0) {
+          favContainer.innerHTML = "<h2>There is no favourite film</h2>";
+          return;
+        }
+
+        favContainer.innerHTML = "";
+        favs.forEach((film) => {
+          const card = document.createElement("div");
+          card.className = "movie-card";
+          card.innerHTML = `
+            <img src="${film.image ? film.image.medium : ""}">
             <h3>${film.name}</h3>
             <button class="remove-btn">Remove</button>`;
 
-        card.querySelector(".remove-btn").addEventListener("click", () => {
+          card.querySelector(".remove-btn").addEventListener("click", () => {
             let currentFavs = JSON.parse(localStorage.getItem("myFavs")) || [];
-            currentFavs = currentFavs.filter(f => f.id !== film.id);
+            currentFavs = currentFavs.filter((f) => f.id !== film.id);
             localStorage.setItem("myFavs", JSON.stringify(currentFavs));
-            displayFavs(); 
-        });
+            displayFavs();
+          });
 
-        favContainer.appendChild(card);
-    });
-}
-displayFavs();
+          favContainer.appendChild(card);
+        });
+      }
+      displayFavs();
     </script>
   </body>
 </html>
