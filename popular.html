@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies DataBase</title>
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+.hero {
+  height: 100vh; 
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url(tyson-moultrie-BQTHOGNHo08-unsplash.jpg); 
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn {
+  background-color: #e5a00d;
+  color: black;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffb400; 
+}
+.popular {
+  padding: 40px;
+  background-color: #000;
+  color: white;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px; 
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s; 
+  cursor: pointer;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Free Movies Online, Watch Anytime Anywhere.</h1>
+          <p>
+            The search is over! Let Plex help you find the perfect movie to
+            watch tonight for free.
+          </p>
+          <button class="btn"><a href="index.html" style="text-decoration: none; color: white;">Watch Free</a></button>
+        </div>
+      </div>
+      <div class="popular">
+  <h2 class="title">Popular Movies</h2>
+  
+  <div class="grid">
+    <div class="movie-card">
+      <img src="81Bivc7COzL._AC_SY879_.jpg" alt="Movie">
+      <p>Batman</p>
+      <p>3,400,00+ views</p>
+    </div>
+    <div class="movie-card">
+      <img src="a75f586ad4fd3db6d5d2870807e98c01.jpg" alt="Movie">
+      <p>1899</p>
+      <p>5,000,00+ views</p>
+    </div>
+    <div class="movie-card">
+      <img src="81xdHOGr-nL._AC_SY879_.jpg" alt="Movie">
+      <p>THe Hobbit</p>
+      <p>7,080,00+ views</p>
+
+    </div>
+    <div class="movie-card">
+      <img src="hector-reyes-PXjQaGxi4JA-unsplash.jpg" alt="Movie">
+      <p>THe SpiderMan</p>
+      <p>1,000,00+ views</p>
+
+    </div>
+    <div class="movie-card">
+      <img src="inception.jpg" alt="Movie">
+      <p>Inception</p>
+      <p>2,0000+ views</p>
+
+    </div>
+    <div class="movie-card">
+      <img src="into.jpg" alt="Movie">
+      <p>Intouchables</p>
+      <p>4,050,000+ views</p>
+
+    </div>
+    <div class="movie-card">
+      <img src="a3fe1953058d51294b8c061a9f76ead7.jpg" alt="Movie">
+      <p>La La Land</p>
+      <p>3,000,00+ views</p>
+
+    </div>
+  </div>
+</div>
+  </body>
+</html>
